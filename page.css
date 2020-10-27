@@ -1,0 +1,72 @@
+.container section {
+    height: 100vh;
+    width: 100%;
+}
+
+html {
+    background-color: var(--color-1);
+}
+
+#edu {
+    perspective: 500px;
+}
+
+.edu-container {
+    position: relative;
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.edu-container * {
+    transition: all 0.5s, transform 1s;
+}
+
+.edu-container .edu-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('./static/standrews.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%) brightness(20%);
+}
+
+.edu-container > h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    color: #ffffff;
+}
+
+.edu-container .edu-detail {
+    position: absolute;
+    right: 100%;
+    height: 100%;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.edu-container:hover .edu-detail {
+    right: 0%;
+}
+
+.edu-container:hover h1 {
+    left: 0%;
+    opacity: 0;
+}
+
+.edu-container:hover .edu-background {
+    filter: grayscale(0%) brightness(60%);
+}

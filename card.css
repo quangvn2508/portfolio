@@ -1,0 +1,154 @@
+.card {
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background-color: var(--color-1);
+    position: fixed;
+}
+.card, .info, .info * {
+    transition-duration: 0.5s;
+}
+
+/* Expanded card */
+
+.expand-card {
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+.expand-card .info .banner {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+}
+
+.expand-card .info .banner h5 {
+    color: #ffffff;
+}
+
+.expand-card .info .banner h1 {
+    color: #ffffff;
+    font-size: 4em;
+}
+
+.expand-card .info .banner p {
+    color: #aaaaaa;
+}
+
+.expand-card .info .contact-list {
+    position: absolute;
+    bottom: 20%;
+    left: 15%;
+}
+
+.expand-card .info .contact-list p {
+    color: #ffffff;
+}
+
+.expand-card .info .contact-list ul {
+    display: flex;
+}
+
+.expand-card .info .contact-list ul li {
+    list-style: none;
+}
+
+.expand-card .info .contact-list ul li img {
+    width: 30px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+/* Collapsed card */
+
+.collapse-card {
+    width: 250px;
+    height: 100px;
+    top: 10px;
+    right: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px 1px #ffffff;
+}
+
+.collapse-card .info .banner {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+}
+
+.collapse-card .info .banner h5 {
+    display: none;
+}
+
+.collapse-card .info .banner h1 {
+    font-size: 1em;
+    color: #ffffff;
+}
+
+.collapse-card .info .banner p {
+    display: none;
+}
+
+.collapse-card .info .contact-list {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translate(0%, -50%);
+}
+
+.collapse-card .info .contact-list ul {
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.collapse-card .info .contact-list ul li {
+    list-style: none;
+}
+
+.collapse-card .info .contact-list ul li img {
+    width: 20px;
+    margin: 5px 5px;
+}
+
+/* Sticks */
+
+
+.card .decor {
+    width: 100%;
+    height: 100vh;
+}
+
+.card .decor span {
+    position: absolute;
+    width: 100%;
+    border: 1px solid #ffffff;
+}
+
+.card .decor span:nth-child(1) {
+    top: 30%;
+    left: 20%;
+    transform: rotate(30deg);
+}
+
+.card .decor span:nth-child(2) {
+    top: 30%;
+    left: 30%;
+    transform: rotate(70deg);
+}
+
+.card .decor span:nth-child(3) {
+    top: 30%;
+    left: 30%;
+    transform: rotate(100deg);
+}
+
+.card .decor span:nth-child(4) {
+    top: 35%;
+    left: 30%;
+    transform: rotate(130deg);
+}

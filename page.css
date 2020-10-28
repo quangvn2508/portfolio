@@ -1,72 +1,118 @@
-.container section {
-    height: 100vh;
-    width: 100%;
-}
 
-html {
+body {
     background-color: var(--color-1);
 }
 
-#edu {
-    perspective: 500px;
-}
-
-.edu-container {
-    position: relative;
-    width: 60%;
-    height: 60%;
-    top: 20%;
-    left: 20%;
-    overflow: hidden;
-    border-radius: 5px;
-}
-
-.edu-container * {
-    transition: all 0.5s, transform 1s;
-}
-
-.edu-container .edu-background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url('./static/standrews.PNG');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: grayscale(100%) brightness(20%);
-}
-
-.edu-container > h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 4em;
-    color: #ffffff;
-}
-
-.edu-container .edu-detail {
-    position: absolute;
-    right: 100%;
-    height: 100%;
-    width: 40%;
-    background-color: rgba(255, 255, 255, 1);
-
+#projects {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
-.edu-container:hover .edu-detail {
-    right: 0%;
+.project-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 100px 0px;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: 0.2s;
 }
 
-.edu-container:hover h1 {
-    left: 0%;
+.project-container figure {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%) brightness(10%);
+    transition: 0.5s;
+}
+
+.project-container h1 {
+    position: absolute;
+    width: 100%;
+    right: 0%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    font-size: 3em;
+    text-align: center;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.project-container article {
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    left: 15%;
+    top: 25%;
+    opacity: 0;
+    transition: 1s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-container article p {
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+.project-container article a {
+    text-decoration: none;
+    margin: 10px 0px;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-container article a span {
+    position: absolute;
+    color: #000000;
+    font-size: 0.8em;
+}
+
+.project-container article a div {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+    background-color: #ffffff;
+    transition: clip-path 1s;
+}
+
+.project-container article a:hover div {
+    animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+    0% { clip-path: polygon(0% 0%, 0% 50%, 0% 100%, 100% 100%, 100% 50%, 100% 0%); }
+    50% { clip-path: polygon(0% 0%, 10% 50%, 0% 100%, 90% 100%, 100% 50%, 90% 0%); }
+    100% { clip-path: polygon(0% 0%, 0% 50%, 0% 100%, 100% 100%, 100% 50%, 100% 0%); }
+  }
+
+.project-container:hover {
+    width: 620px;
+    height: 420px;
+    box-shadow: 5px 5px 15px 2px #000000;
+}
+
+.project-container:hover h1 {
+    right: 100%;
     opacity: 0;
 }
 
-.edu-container:hover .edu-background {
-    filter: grayscale(0%) brightness(60%);
+.project-container:hover article {
+    top: 15%;
+    opacity: 1;
+}
+
+.project-container:hover figure {
+    filter: grayscale(0%) brightness(30%);
 }

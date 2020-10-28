@@ -1,0 +1,14 @@
+{"projects" : [
+    {
+        "title": "Mandelbrot Set Explorer",
+        "background": "./static/standrews.PNG",
+        "link": "https://quangvn2508.github.io/MandelbrotSetWebExplorer/",
+        "description": "Short description"
+    },
+    {
+        "title": "Rocket Trajectory Simulation",
+        "background": "./static/standrews.PNG",
+        "link": "#",
+        "description": "Short description"
+    }
+]}

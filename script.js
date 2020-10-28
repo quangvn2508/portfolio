@@ -3,7 +3,7 @@
 const decor = document.querySelector(".decor");
 const card = document.getElementById("card");
 document.addEventListener("mousemove", parallax);
-// Magic happens here
+
 function parallax(e) {
     let _w = window.innerWidth / 2;
     let _h = window.innerHeight / 2;
@@ -28,3 +28,24 @@ document.addEventListener('scroll', (e) => {
         card.classList.add("expand-card");
     }
 }, false);
+
+$.getJSON("./static/project.json", function(json) {
+    let projects = json.projects;
+    for (let i = 0; i < projects.length; i++) {
+        let project = projects[i];
+        $(`
+        <li class="project-container">
+            <figure style="background-image: url('${project.background}');"></figure>
+            <h1>${project.title}</h1>
+            <article>
+                <p>${project.description}</p>
+                <a href="${project.link}" target="_blank">
+                    <div></div>
+                    <span>SHOW ME</span>
+                </a>
+            </article>
+        </li>`
+        )
+        .appendTo('#projects');
+    }
+});

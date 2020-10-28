@@ -3,7 +3,7 @@
         "title": "Mandelbrot Set Explorer",
         "background": "./static/MandelbrotSet.PNG",
         "link": "https://quangvn2508.github.io/MandelbrotSetWebExplorer/",
-        "description": "A responsive web page, which displays successive magnification of the Mandelbrot Set. I use web worker to run intensive computations while maintaining the previous calculation to reduce application latency."
+        "description": "A responsive web page, which displays successive magnification of the Mandelbrot Set. Use web worker to run intensive computations while maintaining the previous calculation to reduce latency."
     },
     {
         "title": "Interactive World Map",

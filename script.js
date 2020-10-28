@@ -29,7 +29,7 @@ document.addEventListener('scroll', (e) => {
     }
 }, false);
 
-$.getJSON("./static/project.json", function(json) {
+$.getJSON("./project.json", function(json) {
     let projects = json.projects;
     for (let i = 0; i < projects.length; i++) {
         let project = projects[i];

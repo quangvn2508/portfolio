@@ -83,7 +83,6 @@ body {
     position: relative;
     width: 100px;
     height: 30px;
-    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
     background-color: #ffffff;
     transition: clip-path 1s;
 }

@@ -2,7 +2,7 @@
     {
         "title": "Stegami",
         "background": "./static/spy.png",
-        "link": "https://youtu.be/cJ5o9veze4M",
+        "link": "https://devpost.com/software/stegami/",
         "description": "Java desktop application that allows the user to completely conceal one image into another using steganography."
     },
     {

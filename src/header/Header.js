@@ -3,7 +3,7 @@ import './Header.css';
 
 function Header() {
     return (<>
-        <Navbar fixed="top" bg="white" expand="md" className="shadow-sm">
+        <Navbar fixed="top" bg="white" expand="sm" className="shadow-sm">
             <Container>
                 <Navbar.Brand href="#">
                     <img

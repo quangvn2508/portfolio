@@ -1,0 +1,55 @@
+#first-name,
+#last-name,
+#headline {
+    font-weight: bold;
+    cursor: default;
+}
+
+#first-name {
+    font-size: larger;
+}
+
+#last-name {
+    font-size: 3em;
+}
+
+.mouse-bg {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(#ddd, #fff 40%) no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: 0% 0%;
+}
+
+.focus {
+    transform-origin: center;
+    background-size: 100% 100%;
+    animation: enter 0.2s ease-in;
+}
+
+.outfocus {
+    transform-origin: center;
+    background-size: 0% 0%;
+    animation: leave 0.2s ease-in;
+}
+
+@keyframes enter {
+    from {
+        background-size: 0% 0%;
+    }
+    to {
+        background-size: 100% 100%;
+    }
+}
+
+@keyframes leave {
+    from {
+        background-size: 100% 100%;
+    }
+    to {
+        background-size: 0% 0%;
+    }
+}

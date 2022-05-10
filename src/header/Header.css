@@ -1,0 +1,15 @@
+.cs-nav-item {
+    display:inline-block;
+    margin: 0 5px;
+}
+.cs-nav-item:after {
+    display:block;
+    /* align-content: center; */
+    content: '';
+    border-bottom: solid 1px #555;  
+    transform: scaleX(0);  
+    transition: transform 0.2s ease-in-out;
+}
+.cs-nav-item:hover:after { transform: scaleX(1); }
+/* .cs-nav-item.fromRight:after{ transform-origin:100% 50%; }
+.cs-nav-item.fromLeft:after{  transform-origin:  0% 50%; } */

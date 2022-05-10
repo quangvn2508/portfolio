@@ -19,7 +19,7 @@ function MainPage() {
                 <div className='w-50 p-3 d-flex flex-column align-items-end'>
                     <div id='first-name'>Vinh Quang,</div>
                     <div id='last-name'>Nguyen</div>
-                    <div id='headline'>CS &amp; Math @ Univ. St Andrews</div>
+                    <div id='headline'>CS &amp; Math @ Uni of St Andrews</div>
                 </div>
                 <div className="w-50"></div>
             </div>

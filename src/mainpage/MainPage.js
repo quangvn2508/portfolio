@@ -9,7 +9,7 @@ function MainPage() {
                     <Col className='h-100 d-flex flex-column align-items-end justify-content-center'>
                         <div id='first-name'>Vinh Quang,</div>
                         <div id='last-name'>Nguyen</div>
-                        <div id='headline'>CS &amp; Math @ Uni of St Andrews</div>
+                        <div id='headline'>CS &amp; Maths @ Uni of St Andrews</div>
                     </Col>
                     <Col className="h-100 d-none d-sm-block"></Col>
                 </Row>

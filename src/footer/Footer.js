@@ -46,16 +46,18 @@ function Footer() {
                     style={{ border: "1px solid #d3d3d3" }}>
                 </canvas>
                 <div id='contact-details' className='d-flex justify-content-left align-items-center ps-5'>
-                    {Object.keys(contact_details).map((key) => {
+                    {Object.keys(contact_details).map((type) => {
                         return (<Button
-                            key={key}
+                            key={type}
                             className='ms-2 me-2 contact-button'
                             variant="outline-black"
-                            href={contact_details[key]}
+                            href={contact_details[type]}
+                            target="_blank"
                             ><img
-                                src={process.env.PUBLIC_URL + `/${key}.png`}
+                                src={process.env.PUBLIC_URL + `/${type}.png`}
                                 width="30"
                                 height="30"
+                                alt={`${type} contact icon`}
                         /></Button>);
                     })}
                 </div>

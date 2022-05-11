@@ -1,7 +1,6 @@
-import { useState } from 'react';
 import './Footer.css'
+
 function Footer() {
-    const [detailPos, setPos] = useState(0);
     const drawWave = (deltaX, deltaY) => {
         const canvas = document.getElementById("footer-trigger");
         var ctx = canvas.getContext("2d");
@@ -13,7 +12,7 @@ function Footer() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         const pos = w/2 + (w/5) * Math.atan(deltaX/deltaY);
-        const tide = Math.abs((h/5) * Math.atan(deltaX/deltaY));
+        const tide = Math.abs((h/4) * Math.atan(deltaX/deltaY));
 
         ctx.moveTo(0, h);
         for (let i = 0; i <= pos; i+=10)
@@ -39,13 +38,10 @@ function Footer() {
                 <canvas
                     id="footer-trigger"
                     style={{ border: "1px solid #d3d3d3" }}
-                    onMouseEnter={() => setPos(100)}
+                    // onMouseEnter={() => setPos(100)}
                 >
                 </canvas>
-                <div id='contact-details'
-                    onMouseLeave={() => setPos(0)}
-                    style={{transform: `translate(0, -${detailPos}%)`}}>
-                </div>
+                <div id='contact-details'/>
             </div>
     );
 }

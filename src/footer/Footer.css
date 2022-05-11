@@ -32,3 +32,16 @@
 #footer-trigger:hover + #contact-details, #contact-details:hover {
     transform: translate(0, -100%);
 }
+
+.contact-button:hover {
+    border: 1px solid #fff;
+}
+
+.contact-button:active {
+    background-color: #fff;
+}
+
+.contact-button:focus {
+    outline: 0;
+    box-shadow: none!important;
+}

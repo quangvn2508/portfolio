@@ -1,3 +1,4 @@
+import { Button } from 'react-bootstrap';
 import './Footer.css'
 
 function Footer() {
@@ -30,6 +31,11 @@ function Footer() {
         const deltaY = footer.offsetHeight - event.clientY;
         drawWave(deltaX, deltaY);
     };
+    const contact_details = {
+        "email": "mailto:quangvn2508@gmail.com",
+        "github": "https://github.com/quangvn2508",
+        "linkedin": "https://www.linkedin.com/in/vinh-quang-nguyen/"
+    };
     return (
             <div id="footer"
                 onMouseMove={handleMouseMove}
@@ -37,11 +43,22 @@ function Footer() {
                 onLoad={() => drawWave(0, 1)}>
                 <canvas
                     id="footer-trigger"
-                    style={{ border: "1px solid #d3d3d3" }}
-                    // onMouseEnter={() => setPos(100)}
-                >
+                    style={{ border: "1px solid #d3d3d3" }}>
                 </canvas>
-                <div id='contact-details'/>
+                <div id='contact-details' className='d-flex justify-content-left align-items-center ps-5'>
+                    {Object.keys(contact_details).map((key) => {
+                        return (<Button
+                            key={key}
+                            className='ms-2 me-2 contact-button'
+                            variant="outline-black"
+                            href={contact_details[key]}
+                            ><img
+                                src={process.env.PUBLIC_URL + `/${key}.png`}
+                                width="30"
+                                height="30"
+                        /></Button>);
+                    })}
+                </div>
             </div>
     );
 }

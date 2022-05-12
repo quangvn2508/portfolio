@@ -18,9 +18,9 @@
 
 #footer-trigger {
     position: absolute;
-    width: 20vw;
-    height: 4vw;
-    bottom: -5px;
+    width: 40vh;
+    height: 10vh;
+    bottom: -3vh;
     left: 50%;
     transform: translate(-50%, 0);
     border: none !important;

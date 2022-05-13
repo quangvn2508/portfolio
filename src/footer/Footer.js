@@ -25,11 +25,17 @@ function Footer() {
         ctx.fillStyle = "#000000";
         ctx.fill();
     }
-    const handleMouseMove = event => {
+    const handleMove = (clientX, clientY) => {
         const footer = document.getElementById("footer");
-        const deltaX = event.clientX - footer.offsetWidth/2;
-        const deltaY = footer.offsetHeight - event.clientY;
+        const deltaX = clientX - footer.offsetWidth/2;
+        const deltaY = footer.offsetHeight - clientY;
         drawWave(deltaX, deltaY);
+    }
+    const handleMouseMove = event => {
+        handleMove(event.clientX, event.clientY);
+    }
+    const handleTouchMove = event => {
+        handleMove(event.touches[0].clientX, event.touches[0].clientY);
     };
     const contact_details = {
         "email": "mailto:quangvn2508@gmail.com",
@@ -40,7 +46,9 @@ function Footer() {
             <div id="footer"
                 onMouseMove={handleMouseMove}
                 onMouseLeave={() => drawWave(0, 1)}
-                onLoad={() => drawWave(0, 1)}>
+                onLoad={() => drawWave(0, 1)}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={() => drawWave(0, 1)}>
                 <canvas
                     id="footer-trigger"
                     style={{ border: "1px solid #d3d3d3" }}>

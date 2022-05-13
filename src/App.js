@@ -11,11 +11,18 @@ function App() {
         setX(event.clientX);
         setY(event.clientY);
     };
+    const handleTouchMove = event => {
+        setX(event.touches[0].clientX);
+        setY(event.touches[0].clientY);
+    }
     return (
         <div className="App position-relative h-100 overflow-hidden"
             onMouseMove={handleMouseMove}
             onMouseLeave={() => {setFocus(false)}}
-            onMouseEnter={() => {setFocus(true)}}>
+            onMouseEnter={() => {setFocus(true)}}
+            onTouchMove={handleTouchMove}
+            onTouchStart={() => {setFocus(true)}}
+            onTouchEnd={() => {setFocus(false)}}>
             <Header/>
             <MainPage/>
             <Footer/>

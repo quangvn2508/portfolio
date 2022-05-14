@@ -2,6 +2,12 @@ import Header from "./header/Header";
 import MainPage from "./mainpage/MainPage";
 import Footer from "./footer/Footer";
 import { useState } from 'react';
+import {
+    BrowserRouter as Router,
+    Route,
+    Routes
+} from "react-router-dom";
+import CompetitiveProgramming from "./cp/CompetitiveProgramming";
 
 function App() {
     const [x, setX] = useState(0);
@@ -16,6 +22,7 @@ function App() {
         setY(event.touches[0].clientY);
     }
     return (
+        <Router>
         <div className="App position-relative h-100 overflow-hidden"
             onMouseMove={handleMouseMove}
             onMouseLeave={() => {setFocus(false)}}
@@ -24,12 +31,16 @@ function App() {
             onTouchStart={() => {setFocus(true)}}
             onTouchEnd={() => {setFocus(false)}}>
             <Header/>
-            <MainPage/>
+            <Routes>
+                <Route path="/" element={<MainPage />} />
+                <Route path="competitive_programming" element={<CompetitiveProgramming />} />
+            </Routes>
             <Footer/>
             <div
                 className={"mouse-bg " + (focus? "focus":"outfocus")}
                 style={{left: x, top: y}}/>
         </div>
+        </Router>
     );
 }
 

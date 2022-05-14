@@ -1,29 +1,13 @@
+import { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import './Footer.css'
 
 function Footer() {
+    const [percentage, setPercentage] = useState(50);
+    const [percentageHeight, setPercentageHeight] = useState(100);
     const drawWave = (deltaX, deltaY) => {
-        const canvas = document.getElementById("footer-trigger");
-        var ctx = canvas.getContext("2d");
-
-        const w = canvas.offsetWidth;
-        const h = canvas.offsetHeight;
-        canvas.width = w;
-        canvas.height = h;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        const pos = w/2 + (w/5) * Math.atan(deltaX/deltaY);
-        const tide = Math.abs((h/4) * Math.atan(deltaX/deltaY));
-
-        ctx.moveTo(0, h);
-        for (let i = 0; i <= pos; i+=10)
-            ctx.lineTo(i, (h + 5) - (h-tide) * Math.sin((i * Math.PI)/(2 * pos)));
-        for (let i = pos; i <= w; i+=10)
-            ctx.lineTo(i, (h + 5) - (h-tide) * Math.sin(((w-i) * Math.PI)/(2 * (w - pos))));
-        ctx.lineTo(0, h);
-        ctx.stroke();
-        ctx.fillStyle = "#000000";
-        ctx.fill();
+        setPercentage(50 - 30 * Math.atan(-deltaX/deltaY));
+        setPercentageHeight(100 - 40 * Math.abs(Math.atan(deltaX/deltaY)))
     }
     const handleMove = (clientX, clientY) => {
         const footer = document.getElementById("footer");
@@ -46,13 +30,23 @@ function Footer() {
             <div id="footer"
                 onMouseMove={handleMouseMove}
                 onMouseLeave={() => drawWave(0, 1)}
-                onLoad={() => drawWave(0, 1)}
                 onTouchMove={handleTouchMove}
                 onTouchEnd={() => drawWave(0, 1)}>
-                <canvas
-                    id="footer-trigger"
-                    style={{ border: "1px solid #d3d3d3" }}>
-                </canvas>
+                <div id='footer-trigger' className='d-flex justify-content-left align-items-end'>
+                    <svg viewBox="0 0 100 100" className='position-absolute' preserveAspectRatio="none"
+                        width={percentage + "%"}
+                        height={percentageHeight + "%"}
+                        style={{left: 0}}>
+                        <path d="M 0 100 q 100 -195 200 0 Z" stroke='black' stroke-width="2" fill="#000" />
+                    </svg>
+                    <svg viewBox="100 0 100 100" className='position-absolute' preserveAspectRatio="none"
+                        width={(101 - percentage) + "%"}
+                        height={percentageHeight + "%"}
+                        style={{right: 0}}>
+                        <path d="M 0 100 q 100 -195 200 0 Z" stroke='black' stroke-width="2" fill="#000" />
+                    </svg>
+                </div>
+
                 <div id='contact-details' className='d-flex justify-content-left align-items-center ps-5'>
                     {Object.keys(contact_details).map((type) => {
                         return (<Button

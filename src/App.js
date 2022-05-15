@@ -32,8 +32,8 @@ function App() {
             onTouchEnd={() => {setFocus(false)}}>
             <Header/>
             <Routes>
-                <Route path="/" element={<MainPage />} />
-                <Route path="competitive_programming" element={<CompetitiveProgramming />} />
+                <Route exact path="/" element={<MainPage />} />
+                <Route exact path="/competitive_programming" element={<CompetitiveProgramming />} />
             </Routes>
             <Footer clientX={x} clientY={y}/>
             <div

@@ -24,7 +24,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "predeploy": "npm run build",
-        "deploy": "echo 'quangvn.xyz' > ./build/CNAME; gh-pages -d build"
+        "deploy": "echo 'quangvn.xyz' > ./build/CNAME; cp ./404.html ./build/404.html; gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [

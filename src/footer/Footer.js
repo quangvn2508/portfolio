@@ -11,8 +11,8 @@ function Footer(props) {
     }
     useEffect(() => {
         const footer = document.getElementById("footer");
-        const deltaX = props.clientX - footer.offsetWidth/2;
-        const deltaY = footer.offsetHeight - props.clientY;
+        const deltaX = props.clientX - window.innerWidth/2;
+        const deltaY = window.innerHeight - props.clientY;
         drawWave(deltaX, deltaY);
     }, [props.clientX, props.clientY]);
 

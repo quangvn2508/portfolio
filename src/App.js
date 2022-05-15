@@ -35,7 +35,7 @@ function App() {
                 <Route path="/" element={<MainPage />} />
                 <Route path="competitive_programming" element={<CompetitiveProgramming />} />
             </Routes>
-            <Footer/>
+            <Footer clientX={x} clientY={y}/>
             <div
                 className={"mouse-bg " + (focus? "focus":"outfocus")}
                 style={{left: x, top: y}}/>

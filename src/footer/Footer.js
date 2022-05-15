@@ -1,26 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import './Footer.css'
 
-function Footer() {
+function Footer(props) {
     const [percentage, setPercentage] = useState(50);
     const [percentageHeight, setPercentageHeight] = useState(100);
     const drawWave = (deltaX, deltaY) => {
         setPercentage(50 - 30 * Math.atan(-deltaX/deltaY));
         setPercentageHeight(100 - 40 * Math.abs(Math.atan(deltaX/deltaY)))
     }
-    const handleMove = (clientX, clientY) => {
+    useEffect(() => {
         const footer = document.getElementById("footer");
-        const deltaX = clientX - footer.offsetWidth/2;
-        const deltaY = footer.offsetHeight - clientY;
+        const deltaX = props.clientX - footer.offsetWidth/2;
+        const deltaY = footer.offsetHeight - props.clientY;
         drawWave(deltaX, deltaY);
-    }
-    const handleMouseMove = event => {
-        handleMove(event.clientX, event.clientY);
-    }
-    const handleTouchMove = event => {
-        handleMove(event.touches[0].clientX, event.touches[0].clientY);
-    };
+    }, [props.clientX, props.clientY]);
+
     const contact_details = {
         "email": "mailto:quangvn2508@gmail.com",
         "github": "https://github.com/quangvn2508",
@@ -28,10 +23,7 @@ function Footer() {
     };
     return (
             <div id="footer"
-                onMouseMove={handleMouseMove}
                 onMouseLeave={() => drawWave(0, 1)}
-                onTouchStart={handleTouchMove}
-                onTouchMove={handleTouchMove}
                 onTouchEnd={() => drawWave(0, 1)}
                 onClick={() => drawWave(0, 1)}>
                 <div id='footer-trigger' className='d-flex justify-content-left align-items-end'>

@@ -28,7 +28,7 @@ function App() {
             onMouseLeave={() => {setFocus(false)}}
             onMouseEnter={() => {setFocus(true)}}
             onTouchMove={handleTouchMove}
-            onTouchStart={() => {setFocus(true)}}
+            onTouchStart={event => {handleTouchMove(event); setFocus(true)}}
             onTouchEnd={() => {setFocus(false)}}>
             <Header/>
             <Routes>

@@ -30,20 +30,22 @@ function Footer() {
             <div id="footer"
                 onMouseMove={handleMouseMove}
                 onMouseLeave={() => drawWave(0, 1)}
+                onTouchStart={handleTouchMove}
                 onTouchMove={handleTouchMove}
-                onTouchEnd={() => drawWave(0, 1)}>
+                onTouchEnd={() => drawWave(0, 1)}
+                onClick={() => drawWave(0, 1)}>
                 <div id='footer-trigger' className='d-flex justify-content-left align-items-end'>
                     <svg viewBox="0 0 100 100" className='position-absolute' preserveAspectRatio="none"
                         width={percentage + "%"}
                         height={percentageHeight + "%"}
                         style={{left: 0}}>
-                        <path d="M 0 100 q 100 -195 200 0 Z" stroke='black' stroke-width="2" fill="#000" />
+                        <path d="M 0 100 q 100 -195 200 0 Z" fill="#000" />
                     </svg>
                     <svg viewBox="100 0 100 100" className='position-absolute' preserveAspectRatio="none"
                         width={(101 - percentage) + "%"}
                         height={percentageHeight + "%"}
                         style={{right: 0}}>
-                        <path d="M 0 100 q 100 -195 200 0 Z" stroke='black' stroke-width="2" fill="#000" />
+                        <path d="M 0 100 q 100 -195 200 0 Z" fill="#000" />
                     </svg>
                 </div>
 

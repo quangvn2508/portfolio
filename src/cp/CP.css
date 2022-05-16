@@ -3,15 +3,20 @@
 }
 
 .competition-group > * {
-    border: 2px solid #000;
+    border: 1px solid #000;
     border-radius: 5px;
     box-sizing: border-box;
     height: 45px;
     transition: 0.2s;
+    color: #000;
+    text-decoration: none;
 }
-
 
 .competition-selected  {
     background-color: #000;
-    color: #fff;
+    color: #fff !important;
+}
+
+#competition-details > div {
+    font-size: 12px;
 }

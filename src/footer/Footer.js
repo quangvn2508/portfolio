@@ -10,7 +10,6 @@ function Footer(props) {
         setPercentageHeight(100 - 40 * Math.abs(Math.atan(deltaX/deltaY)))
     }
     useEffect(() => {
-        const footer = document.getElementById("footer");
         const deltaX = props.clientX - window.innerWidth/2;
         const deltaY = window.innerHeight - props.clientY;
         drawWave(deltaX, deltaY);

@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 import ContestRecord from "./ContestRecord";
+import { Button, Tabs, Tab } from 'react-bootstrap';
 import './CP.css';
+
+const profiles = {
+    "atcoder": "https://atcoder.jp/users/quangvn",
+    "codeforces": "https://codeforces.com/profile/wvn",
+    "leetcode": "https://leetcode.com/quangvn2508/",
+    "projecteuler": "https://projecteuler.net/profile/quangvn2508.png"
+}
 
 function CompetitiveProgramming() {
     const [data, setData] = useState({});
@@ -25,18 +33,33 @@ function CompetitiveProgramming() {
             setData(tmp);
         });
     }, []);
-    return (<>
-        <div id="cp-page" className="mt-5 pt-5 w-100 h-100 container">
-            <h2>Activities</h2>
-            <div className="h-75 overflow-auto">
-            {
-                Object.keys(data).map((key) => {
-                    return (<ContestRecord key={key} competitions={data[key]}/>)
-                })
-            }
-            </div>
-        </div>
-    </>);
+    return (
+        <div className="mt-5 pt-5 w-100 container">
+            <Tabs defaultActiveKey="profiles">
+                <Tab eventKey="profiles" title="Profiles">
+                    <div  className="cp-content-tab d-flex">
+                        {Object.keys(profiles).map(platform => {
+                            return <Button bsPrefix="div"
+                                key={platform}
+                                className="cp-profile-card d-flex justify-content-center align-items-center"
+                                href={profiles[platform]}
+                                target="_blank">
+                                <img src={process.env.PUBLIC_URL + `${platform}.png`}/>
+                            </Button>;
+                        })}
+                    </div>
+                </Tab>
+                <Tab eventKey="activities" title="Activities">
+                    <div  className="overflow-auto cp-content-tab">
+                    {
+                        Object.keys(data).map((key) => {
+                            return (<ContestRecord key={key} competitions={data[key]}/>)
+                        })
+                    }
+                    </div>
+                </Tab>
+            </Tabs>
+        </div>);
 }
 
 export default CompetitiveProgramming;

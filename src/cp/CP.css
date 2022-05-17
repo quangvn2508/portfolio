@@ -21,3 +21,31 @@
 #competition-details > div {
     font-size: 12px;
 }
+
+.cp-content-tab {
+    height: 60vh;
+    padding-top: 10px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.cp-profile-card {
+    height: 30vh;
+    width: 45%;
+    box-sizing: content-box;
+    margin: 5px;
+    border: 2px solid #000;
+    background-color: #000;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.cp-profile-card img {
+    transition: 0.3s;
+    width: 20vmin;
+}
+
+.cp-profile-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px 1px 1px #aaa;
+}

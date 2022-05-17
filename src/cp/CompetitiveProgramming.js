@@ -26,13 +26,15 @@ function CompetitiveProgramming() {
         });
     }, []);
     return (<>
-        <div className="mt-5 pt-5 w-100 container">
+        <div id="cp-page" className="mt-5 pt-5 w-100 h-100 container">
             <h2>Activities</h2>
+            <div className="h-75 overflow-auto">
             {
                 Object.keys(data).map((key) => {
                     return (<ContestRecord key={key} competitions={data[key]}/>)
                 })
             }
+            </div>
         </div>
     </>);
 }

@@ -2,10 +2,27 @@ html, body, #root {
     width: 100%;
     height: 100%;
 }
+
 :root * {
     font-family: 'Courier New', Courier, monospace;
 }
 
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 
 .mouse-bg {
     width: 300px;
@@ -34,6 +51,7 @@ html, body, #root {
     from {
         background-size: 0% 0%;
     }
+
     to {
         background-size: 100% 100%;
     }
@@ -43,8 +61,8 @@ html, body, #root {
     from {
         background-size: 100% 100%;
     }
+
     to {
         background-size: 0% 0%;
     }
 }
-

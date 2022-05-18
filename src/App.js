@@ -8,6 +8,7 @@ import {
     Routes
 } from "react-router-dom";
 import CompetitiveProgramming from "./cp/CompetitiveProgramming";
+import Projects from "./projects/Projects";
 
 function App() {
     const [x, setX] = useState(0);
@@ -34,6 +35,7 @@ function App() {
             <Routes>
                 <Route exact path="/" element={<MainPage />} />
                 <Route exact path="/competitive_programming" element={<CompetitiveProgramming />} />
+                <Route exact path="/projects" element={<Projects />} />
             </Routes>
             <Footer clientX={x} clientY={y}/>
             <div

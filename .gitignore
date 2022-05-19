@@ -25,5 +25,5 @@ yarn-error.log*
 # remove later
 react_README.md
 
-# competitions.json only needed in build folder
-public/json/competitions.json
+# json only needed in build folder
+public/json/

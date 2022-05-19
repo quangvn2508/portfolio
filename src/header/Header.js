@@ -7,7 +7,7 @@ function Header() {
             <Container>
                 <Navbar.Brand href="/">
                     <img
-                        src={process.env.PUBLIC_URL + "/CatLogo.jpg"}
+                        src={process.env.PUBLIC_URL + "/image/CatLogo.jpg"}
                         width="30"
                         height="30"
                         className="d-inline-block align-top"

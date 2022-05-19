@@ -13,7 +13,7 @@ const profiles = {
 function CompetitiveProgramming() {
     const [data, setData] = useState({});
     useEffect(() => {
-        fetch('competitions.json', {
+        fetch('json/competitions.json', {
             headers : {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'}
@@ -44,7 +44,7 @@ function CompetitiveProgramming() {
                                 className="cp-profile-card d-flex justify-content-center align-items-center"
                                 href={profiles[platform]}
                                 target="_blank">
-                                <img src={process.env.PUBLIC_URL + `${platform}.png`}/>
+                                <img src={process.env.PUBLIC_URL + `image/${platform}.png`}/>
                             </Button>;
                         })}
                     </div>

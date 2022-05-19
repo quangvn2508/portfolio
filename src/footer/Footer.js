@@ -49,7 +49,7 @@ function Footer(props) {
                             href={contact_details[type]}
                             target="_blank"
                             ><img
-                                src={process.env.PUBLIC_URL + `/${type}.png`}
+                                src={process.env.PUBLIC_URL + `image/${type}.png`}
                                 width="30"
                                 height="30"
                                 alt={`${type} contact icon`}

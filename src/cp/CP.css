@@ -47,5 +47,5 @@
 
 .cp-profile-card:hover {
     transform: translate(-3px, -3px);
-    box-shadow: 3px 3px 1px 1px #aaa;
+    box-shadow: 3px 3px 5px 0px #aaa;
 }

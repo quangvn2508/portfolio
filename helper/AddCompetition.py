@@ -1,4 +1,4 @@
-JSON_FILE = 'public/competitions.json'
+JSON_FILE = 'public/json/competitions.json'
 
 def readInput(str):
     print(str, end=': ')

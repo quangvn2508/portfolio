@@ -3,7 +3,9 @@
         "name": "Stegami",
         "background": "spy.png",
         "links": {
-            "link": "https://devpost.com/software/stegami/"
+            "link": "https://devpost.com/software/stegami/",
+            "github": "https://github.com/R-chard/Stegami/",
+            "youtube": "https://www.youtube.com/watch?v=cJ5o9veze4M"
         },
         "description": "Java desktop application that allows the user to completely conceal one image into another using steganography."
     },
@@ -11,7 +13,7 @@
         "name": "CSport",
         "background": "csport.jpg",
         "links": {
-            "github": "#"
+            "github": "https://github.com/quangvn2508/Csport"
         },
         "description": "A competitive programming website contains a ranking system that encouage coders to solve questions at any moments rather then only through contests."
     },
@@ -27,7 +29,8 @@
         "name": "Interactive World Map",
         "background": "worldmap.jpg",
         "links": {
-            "youtube": "https://www.youtube.com/watch?v=Fjs5bNIPAZ4&feature=youtu.be"
+            "youtube": "https://www.youtube.com/watch?v=Fjs5bNIPAZ4&feature=youtu.be",
+            "github": "https://github.com/Canpake/DundeeHackathon2020"
         },
         "description": "An interactive application to show demographic statistics using APIs for live data, which is developed in a 24-hours hackathon with tkinter."
     },

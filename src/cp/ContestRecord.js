@@ -9,7 +9,7 @@ function ContestRecord(props) {
                 return (<Row
                     key={competition.idx}
                     as="a"
-                    className={"mt-3 w-100 position-absolute d-flex flex-column justify-content-end"
+                    className={"w-100 position-absolute d-flex flex-column justify-content-end"
                         + (groupSelected? " competition-selected" : "")}
                     onMouseEnter={() => setSelected(true)}
                     onMouseLeave={() => setSelected(false)}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ContestRecord from "./ContestRecord";
-import { Button, Tabs, Tab } from 'react-bootstrap';
+import { Button, Tabs, Tab, Container } from 'react-bootstrap';
 import './CP.css';
 
 const profiles = {
@@ -12,6 +12,7 @@ const profiles = {
 
 function CompetitiveProgramming() {
     const [data, setData] = useState({});
+    const [activitiesCount, setCount] = useState(0);
     useEffect(() => {
         fetch('json/competitions.json', {
             headers : {
@@ -24,6 +25,7 @@ function CompetitiveProgramming() {
         .then(function(raw_data) {
             let tmp = {};
             raw_data.sort((a, b) => (new Date(a.date) < new Date(b.date)? 1 : -1));
+            setCount(raw_data.length);
             for (let [idx, compe] of raw_data.entries()) {
                 if (!(compe.tag in tmp))
                     tmp[compe.tag] = [];
@@ -34,7 +36,7 @@ function CompetitiveProgramming() {
         });
     }, []);
     return (
-        <div className="mt-5 pt-5 w-100 container">
+        <Container className="mt-5 pt-5 pb-5 w-100">
             <Tabs defaultActiveKey="profiles">
                 <Tab eventKey="profiles" title="Profiles">
                     <div  className="cp-content-tab d-flex">
@@ -50,7 +52,7 @@ function CompetitiveProgramming() {
                     </div>
                 </Tab>
                 <Tab eventKey="activities" title="Activities">
-                    <div  className="overflow-auto cp-content-tab">
+                    <div  className="cp-content-tab w-100" style={{height: `${activitiesCount * 60}px`}}>
                     {
                         Object.keys(data).map((key) => {
                             return (<ContestRecord key={key} competitions={data[key]}/>)
@@ -59,7 +61,7 @@ function CompetitiveProgramming() {
                     </div>
                 </Tab>
             </Tabs>
-        </div>);
+        </Container>);
 }
 
 export default CompetitiveProgramming;

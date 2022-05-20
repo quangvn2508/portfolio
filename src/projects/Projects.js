@@ -18,7 +18,7 @@ function Projects() {
         });
     }, []);
     return (
-        <div className='w-100 h-100' style={{overflowY: "scroll"}}>
+        <div className='w-100'>
             <Container className="mt-5 mb-5 pt-5">
                 <h2>Projects</h2>
                 <Row>

@@ -24,7 +24,7 @@ function App() {
     }
     return (
         <Router>
-        <div className="App position-relative h-100 overflow-hidden"
+        <div className="App position-relative h-100"
             onMouseMove={handleMouseMove}
             onMouseLeave={() => {setFocus(false)}}
             onMouseEnter={() => {setFocus(true)}}
@@ -37,10 +37,12 @@ function App() {
                 <Route exact path="/competitive_programming" element={<CompetitiveProgramming />} />
                 <Route exact path="/projects" element={<Projects />} />
             </Routes>
-            <Footer clientX={x} clientY={y}/>
-            <div
-                className={"mouse-bg " + (focus? "focus":"outfocus")}
-                style={{left: x, top: y}}/>
+            <Footer/>
+            <div className="w-100 h-100 mouse-layer">
+                <div
+                    className={"mouse-bg " + (focus? "focus":"outfocus")}
+                    style={{left: x, top: y}}/>
+            </div>
         </div>
         </Router>
     );

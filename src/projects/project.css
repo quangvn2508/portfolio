@@ -36,10 +36,10 @@
 .project-name {
     text-align: center;
     font-weight: 500;
-    font-size: 4vmax;
+    font-size: 3vmax;
 }
 .project-description {
-    font-size: 1.5vmax;
+    font-size: 1.2vmax;
     text-align: center;
     overflow: hidden;
     max-width: 80%;

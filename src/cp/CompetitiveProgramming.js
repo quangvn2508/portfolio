@@ -46,7 +46,8 @@ function CompetitiveProgramming() {
                                 className="cp-profile-card d-flex justify-content-center align-items-center"
                                 href={profiles[platform]}
                                 target="_blank">
-                                <img src={process.env.PUBLIC_URL + `image/${platform}.png`}/>
+                                <img src={process.env.PUBLIC_URL + `image/${platform}.png`}
+                                    alt={`Vinh Quang Nguyen Competitive Profile in ${platform}`}/>
                             </Button>;
                         })}
                     </div>

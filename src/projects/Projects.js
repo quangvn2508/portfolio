@@ -36,6 +36,7 @@ function Projects() {
                                             ><img
                                                 src={process.env.PUBLIC_URL + `image/${link_type}.png`}
                                                 width="30" height="30"
+                                                alt={`Project ${project["name"]}'s reference link to ${link_type}`}
                                         /></Button>
                                     );
                                 })}

@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import './Footer.css'
 
@@ -22,7 +21,7 @@ function Footer() {
                             src={process.env.PUBLIC_URL + `image/${type}.png`}
                             width="30"
                             height="30"
-                            alt={`${type} contact icon`}
+                            alt={`${type} contact details for Vinh Quang Nguyen`}
                     /></Button>);
                 })}
             </div>

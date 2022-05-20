@@ -3,6 +3,7 @@
     height: 50vh;
     position: relative;
     transition: 0.5s ease;
+    padding: 0 !important;
 }
 
 .project-card-background {
@@ -35,10 +36,10 @@
 .project-name {
     text-align: center;
     font-weight: 500;
-    font-size: 4vw;
+    font-size: 4vmax;
 }
 .project-description {
-    font-size: 1.5vw;
+    font-size: 1.5vmax;
     text-align: center;
     overflow: hidden;
     max-width: 80%;
@@ -58,7 +59,8 @@
 .project-links > div {
     position: absolute;
     bottom: 5vh;
-    transform: translateY(50%);
+    left: 50%;
+    transform: translate(-50%, 50%);
 }
 
 .project-links > div > * {

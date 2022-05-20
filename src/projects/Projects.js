@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Row, Col, Container } from 'react-bootstrap';
 import './project.css'
 
 function Projects() {
@@ -19,11 +19,12 @@ function Projects() {
     }, []);
     return (
         <div className='w-100 h-100' style={{overflowY: "scroll"}}>
-            <div className="mt-5 mb-5 pt-5 container">
+            <Container className="mt-5 mb-5 pt-5">
                 <h2>Projects</h2>
+                <Row>
                 {data.map(project => {
                     return (
-                    <div key={project["name"]} className="w-100 project-card">
+                    <Col xs={12} md={6} key={project["name"]} className="project-card">
                         <div className='project-links'>
                             <div>
                                 {Object.keys(project["links"]).map(link_type => {
@@ -45,10 +46,11 @@ function Projects() {
                             <p className='project-name'>{project["name"]}</p>
                             <p className='project-description'>{project["description"]}</p>
                         </div>
-                    </div>
+                    </Col>
                     );
                 })}
-            </div>
+                </Row>
+            </Container>
         </div>
     );
 }

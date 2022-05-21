@@ -21,7 +21,8 @@
         "name": "Mandelbrot Set Explorer",
         "background": "MandelbrotSet.png",
         "links": {
-            "github": "https://quangvn2508.github.io/MandelbrotSetWebExplorer/"
+            "link": "https://quangvn2508.github.io/MandelbrotSetWebExplorer/",
+            "github": "https://github.com/quangvn2508/MandelbrotSetWebExplorer"
         },
         "description": "A responsive web page, which displays successive magnification of the Mandelbrot Set. Use web worker to run intensive computations while maintaining the previous calculation to reduce latency."
     },

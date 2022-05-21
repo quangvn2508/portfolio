@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
+const marginTop_and_height = 60;
+
 function ContestRecord(props) {
     const [groupSelected, setSelected] = useState(false);
     return (
@@ -15,7 +17,7 @@ function ContestRecord(props) {
                     onMouseLeave={() => setSelected(false)}
                     href={competition.link}
                     target="_blank"
-                    style={{top: competition.idx * 60 + "px"}}>
+                    style={{top: competition.idx * marginTop_and_height + "px"}}>
                         <Col xs={8} className="h-100 d-flex align-items-center">
                             <div className="w-100 text-truncate">{competition.name}</div>
                         </Col>

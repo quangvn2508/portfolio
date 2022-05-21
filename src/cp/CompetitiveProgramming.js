@@ -37,6 +37,7 @@ function CompetitiveProgramming() {
     }, []);
     return (
         <Container className="mt-5 pt-5 pb-5 w-100">
+            <h2>Competitive Programming</h2>
             <Tabs defaultActiveKey="profiles">
                 <Tab eventKey="profiles" title="Profiles">
                     <div  className="cp-content-tab d-flex">

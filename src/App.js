@@ -25,7 +25,7 @@ function App() {
     }
     return (
         <Router>
-        <div className="App position-relative h-100"
+        <div className="position-relative h-100"
             onMouseMove={handleMouseMove}
             onMouseLeave={() => {setFocus(false)}}
             onMouseEnter={() => {setFocus(true)}}

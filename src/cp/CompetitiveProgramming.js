@@ -37,9 +37,9 @@ function CompetitiveProgramming() {
     }, []);
     return (
         <Container className="mt-5 pt-5 pb-5 w-100">
-            <h2>Competitive Programming</h2>
+            <h2>Competitive Programming (CP)</h2>
             <Tabs defaultActiveKey="profiles">
-                <Tab eventKey="profiles" title="Profiles">
+                <Tab eventKey="profiles" title="CP Profiles">
                     <div  className="cp-content-tab d-flex">
                         {Object.keys(profiles).map(platform => {
                             return <Button bsPrefix="div"
@@ -53,7 +53,7 @@ function CompetitiveProgramming() {
                         })}
                     </div>
                 </Tab>
-                <Tab eventKey="activities" title="Activities">
+                <Tab eventKey="activities" title="Competition Activities">
                     <div  className="cp-content-tab w-100" style={{height: `${activitiesCount * 60}px`}}>
                     {
                         Object.keys(data).map((key) => {

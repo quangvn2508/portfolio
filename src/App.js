@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import CompetitiveProgramming from "./cp/CompetitiveProgramming";
 import Projects from "./projects/Projects";
+import Profile from "./profile/Profile";
 
 function App() {
     const [x, setX] = useState(0);
@@ -36,6 +37,7 @@ function App() {
                 <Route exact path="/" element={<MainPage />} />
                 <Route exact path="/competitive_programming" element={<CompetitiveProgramming />} />
                 <Route exact path="/projects" element={<Projects />} />
+                <Route exact path="/profile" element={<Profile />} />
             </Routes>
             <Footer/>
             <div className="w-100 h-100 mouse-layer">

@@ -18,7 +18,8 @@ function Header() {
                 <Navbar.Collapse className="justify-content-end">
                     <Nav>
                         <Nav.Link className="cs-nav-item" href="projects">Projects</Nav.Link>
-                        <Nav.Link className="cs-nav-item" href="competitive_programming">Competitive Programming</Nav.Link>
+                        <Nav.Link className="cs-nav-item" href="competitive_programming">CP</Nav.Link>
+                        <Nav.Link className="cs-nav-item" href="profile">Profile</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

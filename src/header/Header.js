@@ -1,4 +1,5 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import './Header.css';
 
 function Header() {
@@ -17,9 +18,9 @@ function Header() {
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                     <Nav>
-                        <Nav.Link className="cs-nav-item" href="projects">Projects</Nav.Link>
-                        <Nav.Link className="cs-nav-item" href="competitive_programming">CP</Nav.Link>
-                        <Nav.Link className="cs-nav-item" href="profile">Profile</Nav.Link>
+                        <Nav.Link as={Link} className="cs-nav-item" to="projects">Projects</Nav.Link>
+                        <Nav.Link as={Link} className="cs-nav-item" to="competitive_programming">CP</Nav.Link>
+                        <Nav.Link as={Link} className="cs-nav-item" to="profile">Profile</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

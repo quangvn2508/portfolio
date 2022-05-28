@@ -36,15 +36,16 @@ function CompetitiveProgramming() {
         });
     }, []);
     return (
+        <div className="w-100 bg-black">
         <Container className="mt-5 pt-5 pb-5 w-100">
-            <h2>Competitive Programming (CP)</h2>
+            <h2 className="text-white">Competitive Programming (CP)</h2>
             <Tabs defaultActiveKey="profiles">
-                <Tab eventKey="profiles" title="CP Profiles">
-                    <div  className="cp-content-tab d-flex">
+                <Tab eventKey="profiles" title="CP Profiles" style={{color: "white !important"}}>
+                    <div className="cp-content-tab d-flex">
                         {Object.keys(profiles).map(platform => {
                             return <Button bsPrefix="div"
                                 key={platform}
-                                className="cp-profile-card d-flex justify-content-center align-items-center"
+                                className="mt-4 cp-profile-card d-flex justify-content-center align-items-center"
                                 href={profiles[platform]}
                                 target="_blank">
                                 <img src={process.env.PUBLIC_URL + `image/${platform}.png`}
@@ -63,7 +64,8 @@ function CompetitiveProgramming() {
                     </div>
                 </Tab>
             </Tabs>
-        </Container>);
+        </Container>
+        </div>);
 }
 
 export default CompetitiveProgramming;

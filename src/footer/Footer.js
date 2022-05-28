@@ -10,7 +10,7 @@ const contact_details = {
 
 function Footer() {
     return (
-            <div id='contact-details' className='d-flex justify-content-left align-items-center ps-5'>
+            <div id='contact-details' className='d-flex justify-content-left align-items-center ps-5 bg-black'>
                 {Object.keys(contact_details).map((type) => {
                     return (<Button
                         key={type}

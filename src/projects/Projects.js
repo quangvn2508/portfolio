@@ -18,14 +18,14 @@ function Projects() {
         });
     }, []);
     return (
-        <div className='w-100'>
-            <Container className="mt-5 mb-5 pt-5">
-                <h2>Projects</h2>
+        <div className='w-100 bg-black'>
+            <Container className="mt-5 pb-5 pt-5">
+                <h2 className='text-white'>Projects</h2>
                 <Row>
                 {data.map(project => {
                     return (
                     <Col xs={12} md={6} key={project["name"]} className="project-card">
-                        <div className='project-links'>
+                        <div className='project-links bg-dark'>
                             <div>
                                 {Object.keys(project["links"]).map(link_type => {
                                     return (

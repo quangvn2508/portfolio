@@ -19,14 +19,17 @@ function Profile() {
         });
     }, []);
     return (
-        <Container id="profile-page" className="pt-5 pb-5">
-            {Object.keys(profiles).map(group => {
-                return (<>
-                    <h2 className="mt-5">{group}</h2>
-                    <ProfileGroup section={profiles[group]}/>
-                </>);
-            })}
-        </Container>);
+        <div className="w-100 bg-black">
+            <Container id="profile-page" className="pt-5 pb-5">
+                {Object.keys(profiles).map(group => {
+                    return (<>
+                        <h2 className="mt-5 text-white">{group}</h2>
+                        <ProfileGroup section={profiles[group]}/>
+                    </>);
+                })}
+            </Container>
+        </div>
+        );
 }
 
 export default Profile;

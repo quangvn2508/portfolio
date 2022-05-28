@@ -46,3 +46,11 @@
     transform: translate(-5px, -5px);
     box-shadow: 3px 3px 8px 2px #666;
 }
+
+.custom-tab .nav-link {
+    color: #fff !important;
+}
+
+.custom-tab .active {
+    color: #000 !important;
+}

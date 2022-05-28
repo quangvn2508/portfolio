@@ -39,8 +39,8 @@ function CompetitiveProgramming() {
         <div className="w-100 bg-black">
         <Container className="mt-5 pt-5 pb-5 w-100">
             <h2 className="text-white">Competitive Programming (CP)</h2>
-            <Tabs defaultActiveKey="profiles">
-                <Tab eventKey="profiles" title="CP Profiles" style={{color: "white !important"}}>
+            <Tabs className="custom-tab" defaultActiveKey="profiles">
+                <Tab eventKey="profiles" title="CP Profiles">
                     <div className="cp-content-tab d-flex">
                         {Object.keys(profiles).map(platform => {
                             return <Button bsPrefix="div"

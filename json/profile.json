@@ -1,0 +1,130 @@
+{
+    "Education": [
+        {
+            "name": "University of St Andrews",
+            "overview": [
+                "One of 18 students eligible for direct entry into second year",
+                "First Class (Deans' List 2019-2022) in all years",
+                "Average 17.1/20"
+            ],
+            "other": [
+                {
+                    "name": "Modules",
+                    "type": "0",
+                    "list": [
+                        "Constraint Programming",
+                        "Differential Equations",
+                        "Operating Systems",
+                        "Distributed Systems",
+                        "Fractal Geometry",
+                        "Number Theory",
+                        "Complex Analysis",
+                        "Linear Mathematics ",
+                        "Algebra: Rings and Fields",
+                        "Computational Complexity",
+                        "Groups",
+                        "Combinatorics and Probability",
+                        "Foundations of Computation",
+                        "Multivariate Calculus",
+                        "Abstract Algebra",
+                        "Computer Systems"
+                    ]
+                },
+                {
+                    "name": "Links",
+                    "type": "1",
+                    "list": [
+                        {"name": "Uni.","URL": "https://www.st-andrews.ac.uk/"}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Rossall School",
+            "overview": [
+                "18 months A-level course"
+            ],
+            "other": [
+                {
+                    "name": "Subjects",
+                    "type": "0",
+                    "list": [
+                        "Mathematics (A*)",
+                        "Further Mathematics (A*)",
+                        "Physics (A*)",
+                        "Computer Science (A)"
+                    ]
+                },
+                {
+                    "name": "Links",
+                    "type": "1",
+                    "list": [
+                        {"name": "School's page","URL": "https://rossall.org.uk/"}
+                    ]
+                }
+            ]
+        }
+    ],
+    "Work Experience": [
+        {
+            "name": "Webex, Cisco",
+            "overview": [
+                "Working with multithreaded asynchronous C++ applications along with Qt application containing a mix of C++ and QML",
+                "My work heavily followed Test Driven Development to ensure a smooth and reliable manual test on real devices",
+                "Contributed directly to production code that will be released to Cisco's customers"
+            ],
+            "other": [
+                {
+                    "name": "Technologies",
+                    "type": "0",
+                    "list": [
+                        "C++",
+                        "Qt",
+                        "QML",
+                        "TDD",
+                        "Agile"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "FPT Software",
+            "overview": [
+                "Worked on a Rest API using Spring framework",
+                "Responsible for the front-end of the application and integration between front-end and back-end",
+                "Unit testing is one of the most important aspect of the project"
+            ],
+            "other": [
+                {
+                    "name": "Technologies",
+                    "type": "0",
+                    "list": [
+                        "JSP",
+                        "Spring",
+                        "Java",
+                        "Restful",
+                        "API",
+                        "MySQL"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "FPT Software",
+            "overview": [
+                "Founded Competitive programming St Andrews",
+                "The team conducted more than 60 weekly contests",
+                "I designed over 14 contests with 45+ original question"
+            ],
+            "other": [
+                {
+                    "name": "Links",
+                    "type": "1",
+                    "list": [
+                        {"name": "Github", "URL": "https://github.com/CP-STA/St-Andrews-Competitive-Programming"}
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -21,7 +21,7 @@ function ContestRecord(props) {
                             <div className='w-100 text-truncate'>Rank: {competition.ranking.me + "/" + competition.ranking.total}</div>
                         </Col>
                         <Button
-                            className='h-100 activity-link'
+                            className='h-100 activity-link d-flex justify-content-center align-items-center'
                             variant="outline-black"
                             href={competition.link}
                             target="_blank"

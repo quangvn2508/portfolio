@@ -4,6 +4,7 @@ import './project.css'
 
 function Projects() {
     const [data, setData] = useState([]);
+    const [topCard, setTopCard] = useState(-1);
     useEffect(() => {
         fetch('json/projects.json', {
             headers : {
@@ -22,9 +23,10 @@ function Projects() {
             <Container className="mt-5 pb-5 pt-5">
                 <h2 className='text-white'>Projects</h2>
                 <Row>
-                {data.map(project => {
+                {data.map((project, index) => {
                     return (
-                    <Col xs={12} md={6} key={project["name"]} className="project-card">
+                    <Col xs={12} md={6} key={project["name"]} className="project-card" style={{zIndex: (topCard === index? "1" : "0")}}
+                        onMouseEnter={() => setTopCard(index)}>
                         <div className='project-links bg-dark'>
                             <div>
                                 {Object.keys(project["links"]).map(link_type => {

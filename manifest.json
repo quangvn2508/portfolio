@@ -1,7 +1,13 @@
 {
-    "short_name": "React App",
-    "name": "Create React App Sample",
-    "icons": [],
+    "short_name": "VQN",
+    "name": "VQN Personal Website",
+    "icons": [
+        {
+            "src": "/image/CatLogo.png",
+            "type": "image/png",
+            "sizes": "430x430"
+        }
+    ],
     "start_url": ".",
     "display": "standalone",
     "theme_color": "#000000",

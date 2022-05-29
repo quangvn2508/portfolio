@@ -42,5 +42,14 @@
             "github": "https://github.com/kanishkalikhanna/Hack-The-Bubble-2019"
         },
         "description": "An application to simulate the trajectory path of an object in space by applying Newton's law of universal gravitation"
+    },
+    {
+        "name": "Personal Website",
+        "background": "personal_website.png",
+        "links": {
+            "github": "https://github.com/quangvn2508/portfolio",
+            "link": "http://quangvn.xyz/"
+        },
+        "description": "A SPA using ReactJS to showcase some of my works and simultaneously include cool animations that I have seen during my study on Web Development."
     }
 ]

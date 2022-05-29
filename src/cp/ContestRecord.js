@@ -1,6 +1,6 @@
 import { Row, Col, Button } from 'react-bootstrap';
 
-const marginTop_and_height = 60;
+const marginTop_and_height = 65;
 
 function ContestRecord(props) {
     return (
@@ -12,10 +12,10 @@ function ContestRecord(props) {
                         + (props.groupSelected === props.groupId? " competition-selected" : "")}
                     onClick={() => props.setSelected(props.groupSelected === props.groupId? "" : props.groupId)}
                     style={{top: competition.idx * marginTop_and_height + "px"}}>
-                        <Col xs={8} className="h-100 d-flex align-items-center">
-                            <div className="w-100 text-truncate">{competition.name}</div>
+                        <Col xs={7} md={8} className="h-100 d-flex align-items-center">
+                            <div className="w-100 contest-name">{competition.name}</div>
                         </Col>
-                        <Col id="competition-details" xs={4} className="d-flex flex-column justify-content-center h-100">
+                        <Col id="competition-details" xs={5} md={4} className="d-flex flex-column justify-content-center h-100">
                             <div className='w-100 text-truncate'>Date: {new Date(competition.date).toLocaleDateString("en-US",
                                     {year: 'numeric', month: 'short', day: 'numeric'})}</div>
                             <div className='w-100 text-truncate'>Rank: {competition.ranking.me + "/" + competition.ranking.total}</div>

@@ -55,8 +55,8 @@ function CompetitiveProgramming() {
                         })}
                     </div>
                 </Tab>
-                <Tab eventKey="activities" title="Competition Activities">
-                    <div  className="cp-content-tab w-100" style={{height: `${activitiesCount * 60}px`}}>
+                <Tab eventKey="activities" title="CP Activities">
+                    <div  className="cp-content-tab w-100" style={{height: `${activitiesCount * 65}px`}}>
                     {
                         Object.keys(data).map((key) => {
                             return (<ContestRecord

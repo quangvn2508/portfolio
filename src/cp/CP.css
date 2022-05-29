@@ -5,9 +5,9 @@
 .competition-activity {
     margin: 15px 0 0 0 !important;
     border-left: 1px solid #eee;
-    padding-right: 50px;
+    padding-right: 30px;
     box-sizing: border-box;
-    height: 45px;
+    height: 50px;
     transition: 0.2s;
     color: #fff !important;
     text-decoration: none;
@@ -20,7 +20,11 @@
 
 .activity-link {
     opacity: 0 !important;
-    width: 50px !important;
+    width: 30px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    position: absolute;
+    right: 0;
 }
 
 .competition-selected .activity-link {
@@ -39,8 +43,12 @@
     }
 }
 
+.contest-name {
+    font-size: 3vmin;
+}
+
 #competition-details > div {
-    font-size: 12px;
+    font-size: 2.5vmin;
 }
 
 .cp-content-tab {

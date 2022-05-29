@@ -1,22 +1,16 @@
-import { useState } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 
 const marginTop_and_height = 60;
 
 function ContestRecord(props) {
-    const [groupSelected, setSelected] = useState(false);
     return (
         <div className="w-100 competition-group">
             {props.competitions.map(competition => {
                 return (<Row
                     key={competition.idx}
-                    as="a"
-                    className={"w-100 position-absolute d-flex flex-column justify-content-end"
-                        + (groupSelected? " competition-selected" : "")}
-                    onMouseEnter={() => setSelected(true)}
-                    onMouseLeave={() => setSelected(false)}
-                    href={competition.link}
-                    target="_blank"
+                    className={"w-100 position-absolute d-flex flex-column justify-content-end competition-activity"
+                        + (props.groupSelected === props.groupId? " competition-selected" : "")}
+                    onClick={() => props.setSelected(props.groupSelected === props.groupId? "" : props.groupId)}
                     style={{top: competition.idx * marginTop_and_height + "px"}}>
                         <Col xs={8} className="h-100 d-flex align-items-center">
                             <div className="w-100 text-truncate">{competition.name}</div>
@@ -26,6 +20,18 @@ function ContestRecord(props) {
                                     {year: 'numeric', month: 'short', day: 'numeric'})}</div>
                             <div className='w-100 text-truncate'>Rank: {competition.ranking.me + "/" + competition.ranking.total}</div>
                         </Col>
+                        <Button
+                            className='h-100 activity-link'
+                            variant="outline-black"
+                            href={competition.link}
+                            target="_blank"
+                            disabled={props.groupSelected !== props.groupId}
+                            ><img
+                                src={process.env.PUBLIC_URL + "image/right-arrow.png"}
+                                width="30"
+                                height="30"
+                                alt="Competition activity link"/>
+                        </Button>
                     </Row>);
             })}
         </div>);

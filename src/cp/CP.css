@@ -2,18 +2,41 @@
     position: relative;
 }
 
-.competition-group > * {
+.competition-activity {
     margin: 15px 0 0 0 !important;
     border-left: 1px solid #eee;
+    padding-right: 50px;
     box-sizing: border-box;
     height: 45px;
     transition: 0.2s;
     color: #fff !important;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .competition-selected  {
     box-shadow: 2px 2px 4px 2px #666;
+}
+
+.activity-link {
+    opacity: 0 !important;
+    width: 50px !important;
+}
+
+.competition-selected .activity-link {
+    animation: highlight 2s ease-in-out infinite;
+}
+
+@keyframes highlight {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 #competition-details > div {

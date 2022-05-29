@@ -13,6 +13,7 @@ const profiles = {
 function CompetitiveProgramming() {
     const [data, setData] = useState({});
     const [activitiesCount, setCount] = useState(0);
+    const [groupSelected, setSelected] = useState("");
     useEffect(() => {
         fetch('json/competitions.json', {
             headers : {
@@ -58,7 +59,12 @@ function CompetitiveProgramming() {
                     <div  className="cp-content-tab w-100" style={{height: `${activitiesCount * 60}px`}}>
                     {
                         Object.keys(data).map((key) => {
-                            return (<ContestRecord key={key} competitions={data[key]}/>)
+                            return (<ContestRecord
+                                key={key}
+                                groupId={key}
+                                groupSelected={groupSelected}
+                                setSelected={setSelected}
+                                competitions={data[key]}/>)
                         })
                     }
                     </div>

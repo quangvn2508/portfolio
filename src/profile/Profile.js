@@ -22,10 +22,10 @@ function Profile() {
         <div className="w-100 bg-black">
             <Container id="profile-page" className="pt-5 pb-5">
                 {Object.keys(profiles).map(group => {
-                    return (<>
+                    return (<div key={group}>
                         <h2 className="mt-5 text-white">{group}</h2>
                         <ProfileGroup section={profiles[group]}/>
-                    </>);
+                    </div>);
                 })}
             </Container>
         </div>

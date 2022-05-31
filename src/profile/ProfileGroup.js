@@ -26,13 +26,21 @@ function EntryOther(props) {
     </>);
 }
 
+function dateToString(date) {
+    return date.toLocaleDateString("en-US", {year: 'numeric', month: 'short'});
+}
+
 function ProfileGroup(props) {
     return (
         <Accordion>
             {props.section.map((GroupEntry, index) => {
                 return (
                     <Accordion.Item key={index} eventKey={index}>
-                        <Accordion.Header>{GroupEntry["name"]}</Accordion.Header>
+                        <Accordion.Header>
+                            <span className="profile-date">[{dateToString(new Date(GroupEntry["start"]))} - {dateToString(new Date(GroupEntry["end"]))}]</span>
+                            &nbsp;
+                            {GroupEntry["name"]}
+                        </Accordion.Header>
                         <Accordion.Body>
                             <EntryOverview overview={GroupEntry["overview"]}/>
                             {

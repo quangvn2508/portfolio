@@ -1,7 +1,9 @@
 {
     "Education": [
         {
-            "name": "University of St Andrews",
+            "name": "Uni. of St Andrews",
+            "start": "2019-9",
+            "end": "2022-6",
             "overview": [
                 "One of 18 students eligible for direct entry into second year",
                 "First Class (Deans' List 2019-2022) in all years",
@@ -41,6 +43,8 @@
         },
         {
             "name": "Rossall School",
+            "start": "2018-1",
+            "end": "2019-6",
             "overview": [
                 "18 months A-level course"
             ],
@@ -68,6 +72,8 @@
     "Work Experience": [
         {
             "name": "Webex, Cisco",
+            "start": "2021-6",
+            "end": "2021-9",
             "overview": [
                 "Working with multithreaded asynchronous C++ applications along with Qt application containing a mix of C++ and QML",
                 "My work heavily followed Test Driven Development to ensure a smooth and reliable manual test on real devices",
@@ -89,6 +95,8 @@
         },
         {
             "name": "FPT Software",
+            "start": "2020-7",
+            "end": "2020-9",
             "overview": [
                 "Worked on a Rest API using Spring framework",
                 "Responsible for the front-end of the application and integration between front-end and back-end",
@@ -111,6 +119,8 @@
         },
         {
             "name": "CPSTA",
+            "start": "2020-1",
+            "end": "2021-5",
             "overview": [
                 "Founded Competitive programming St Andrews",
                 "The team conducted more than 60 weekly contests",

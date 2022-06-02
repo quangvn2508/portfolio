@@ -5,7 +5,7 @@ const contact_details = {
     "email": "mailto:quangvn2508@gmail.com",
     "github": "https://github.com/quangvn2508",
     "linkedin": "https://www.linkedin.com/in/vinh-quang-nguyen/",
-    "cv": process.env.PUBLIC_URL + "pdf/CV.pdf"
+    "cv": "https://github.com/quangvn2508/CV/blob/master/aux/main.pdf"
 };
 
 function Footer() {

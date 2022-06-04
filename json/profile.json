@@ -36,7 +36,8 @@
                     "name": "Links",
                     "type": "1",
                     "list": [
-                        {"name": "Uni.","URL": "https://www.st-andrews.ac.uk/"}
+                        {"name": "Uni.","URL": "https://www.st-andrews.ac.uk/"},
+                        {"name": "2022 Top 1 UK","URL": "https://www.thetimes.co.uk/article/uk-university-rankings-revealed-the-times-league-table-dbxtwgm70"}
                     ]
                 }
             ]

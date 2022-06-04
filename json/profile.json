@@ -63,7 +63,8 @@
                     "name": "Links",
                     "type": "1",
                     "list": [
-                        {"name": "School's page","URL": "https://rossall.org.uk/"}
+                        {"name": "School's page","URL": "https://rossall.org.uk/"},
+                        {"name": "2019 Grad News","URL": "https://rossall.org.uk/rossall-school-celebrates-a-rise-in-top-grades-for-the-graduates-of-2019/#:~:text=Vinh%20Quang%20Nguyen,University%20of%20St%20Andrews."}
                     ]
                 }
             ]

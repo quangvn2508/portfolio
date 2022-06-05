@@ -7,7 +7,8 @@ const profiles = {
     "atcoder": "https://atcoder.jp/users/quangvn",
     "codeforces": "https://codeforces.com/profile/wvn",
     "leetcode": "https://leetcode.com/quangvn2508/",
-    "projecteuler": "https://projecteuler.net/profile/quangvn2508.png"
+    "projecteuler": "https://projecteuler.net/profile/quangvn2508.png",
+    "vnoj": "https://oj.vnoi.info/user/quangvn2508",
 }
 
 function CompetitiveProgramming() {

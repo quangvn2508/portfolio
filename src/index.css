@@ -18,5 +18,5 @@ html, body, #root {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 3px;
-    background: #fff;
+    background: linear-gradient(to top, #ddd 0%, #555 100%);
 }

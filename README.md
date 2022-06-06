@@ -36,8 +36,8 @@ For example,
 * ```name```: Contest name
 * ```date```: Contest date in any valid format
 * ```ranking```
-    * ```me```: My contest ranking
-    * ```total```: Estimate total number of participants
+    * ```me```: My contest final ranking (leave empty if unknown)
+    * ```total```: Estimate total number of participants (leave empty if unknown)
 
 For example,
 
@@ -53,7 +53,7 @@ For example,
 }
 ```
 
-Unlike Projects, Activities tab in competition need to update frequently, therefore, a helper script (```helper/AddCompetition.py```) is needed to update the json file. The helper script ask each of the fields listed above with date entries splited into day, month, year to prevent misformatted date field.
+Unlike Projects, Activities tab in competition need to update frequently, therefore, a helper script (```helper/AddCompetition.py```) is needed to update the json file. The helper script ask each of the fields listed above with date entries splited into day, month, year to prevent misformatted date field. Often, when final ranking and number of participants unknown, blank input result in "???" which can later be modified with helper script (```helper/UpdateCompetition.py```).
 
 ## Profile
 

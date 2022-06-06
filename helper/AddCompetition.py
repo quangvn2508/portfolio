@@ -2,7 +2,8 @@ JSON_FILE = 'public/json/competitions.json'
 
 def readInput(str):
     print(str, end=': ')
-    return input()
+    inp = input()
+    return "???" if inp == "" else inp
 
 new_contest = {
     "tag": readInput("contest series"),
